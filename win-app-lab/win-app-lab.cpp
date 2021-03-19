@@ -5,7 +5,6 @@
 #include "win-app-lab.h"
 #include <stdio.h>
 #include <string>
-#include "atlstr.h"
 
 
 #define BUF_SIZE 32
