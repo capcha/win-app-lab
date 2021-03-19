@@ -181,7 +181,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
       HDC hdc = BeginPaint(hWnd, &ps);
       std::wstring result = L"Текущий год : " + std::wstring((LPCWSTR)currentYear);
       // Вывод результата в окно
-      TextOut(hdc, 30, 30, result.c_str(), result.size());
+      TextOutW(hdc, 30, 30, result.c_str(), result.size());
       EndPaint(hWnd, &ps);
    }
    break;
