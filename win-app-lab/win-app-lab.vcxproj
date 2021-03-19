@@ -145,6 +145,7 @@
     <ClInclude Include="win-app-lab.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Info.cpp" />
     <ClCompile Include="win-app-lab.cpp" />
   </ItemGroup>
   <ItemGroup>
