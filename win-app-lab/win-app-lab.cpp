@@ -15,19 +15,6 @@
 #include <stdio.h>
 #include <string>
 
-#define IDS_APP_TITLE			103
-
-#define IDR_MAINFRAME			128
-#define IDD_WINAPPLAB_DIALOG	102
-#define IDD_ABOUTBOX			103
-#define IDM_ABOUT				104
-#define IDM_EXIT				105
-#define IDI_WINAPPLAB			107
-#define IDI_SMALL				108
-#define IDC_WINAPPLAB			109
-#define IDC_MYICON				2
-
-
 #define BUF_SIZE 32
 #define MAX_LOADSTRING 100
 TCHAR  currentYear[BUF_SIZE];
@@ -64,27 +51,11 @@ int CALLBACK WinMain(
 
    if (!RegisterClassEx(&wcex))
    {
-      MessageBox(NULL,
-         _T("Call to RegisterClassEx failed!"),
-         _T("Windows Desktop Guided Tour"),
-         NULL);
-
       return 1;
    }
 
-   // Store instance handle in our global variable
    hInst = hInstance;
 
-   // The parameters to CreateWindow explained:
-   // szWindowClass: the name of the application
-   // szTitle: the text that appears in the title bar
-   // WS_OVERLAPPEDWINDOW: the type of window to create
-   // CW_USEDEFAULT, CW_USEDEFAULT: initial position (x, y)
-   // 500, 100: initial size (width, length)
-   // NULL: the parent of this window
-   // NULL: this application does not have a menu bar
-   // hInstance: the first parameter from WinMain
-   // NULL: not used in this application
    HWND hWnd = CreateWindow(
       szWindowClass,
       szTitle0,
@@ -99,19 +70,10 @@ int CALLBACK WinMain(
 
    if (!hWnd)
    {
-      MessageBox(NULL,
-         _T("Call to CreateWindow failed!"),
-         _T("Windows Desktop Guided Tour"),
-         NULL);
-
       return 1;
    }
 
-   // The parameters to ShowWindow explained:
-   // hWnd: the value returned from CreateWindow
-   // nCmdShow: the fourth parameter from WinMain
-   ShowWindow(hWnd,
-      nCmdShow);
+   ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
 
    // Main message loop:
