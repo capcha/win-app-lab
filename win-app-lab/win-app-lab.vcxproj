@@ -139,21 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="win-app-lab.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Info.cpp" />
     <ClCompile Include="win-app-lab.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico" />
+    <Image Include="win-app-lab.ico" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win-app-lab.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="small.ico" />
-    <Image Include="win-app-lab.ico" />
+    <ClInclude Include="Resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
